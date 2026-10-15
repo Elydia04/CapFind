@@ -6,9 +6,11 @@ export function AppLayout() {
   const { toast, clearToast } = useApp()
 
   return (
-    <div className="relative flex h-svh flex-col overflow-hidden bg-page">
-      <Outlet />
-      {toast ? <Toast message={toast} onDismiss={clearToast} /> : null}
+    <div className="flex h-svh justify-center bg-page">
+      <div className="relative flex h-full w-full max-w-app flex-col overflow-hidden border-x border-line bg-page">
+        <Outlet />
+        {toast ? <Toast message={toast} onDismiss={clearToast} /> : null}
+      </div>
     </div>
   )
 }

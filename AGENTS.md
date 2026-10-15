@@ -24,10 +24,10 @@ Stack: React + Vite + TypeScript (TSX) + Tailwind CSS v4 + react-router-dom + lu
 Extra tabs so nav is never a dead end: /applications and /profile (simple screens).
 
 ### Layout
-- Mobile-first, full width. There is NO phone frame and NO status bar: the app fills
-  the browser/viewport at every screen size (blue AppBar -> scrollable content
-  -> BottomNav as needed). This intentionally deviates from the original phone-frame
-  wireframe at the user's request.
+- Mobile-first, single column. There is NO phone frame and NO status bar. The app
+  renders in a centered column (`max-w-app`, 30rem) that fills the phone's width and
+  sits centered on wider screens. This intentionally deviates from the original
+  phone-frame wireframe at the user's request.
 - Every screen has: blue AppBar -> scrollable content -> BottomNav
   (except /login and /project/:id, which has a sticky action bar).
 
