@@ -24,7 +24,7 @@ const TABS: readonly { value: TabValue; label: string }[] = [
 
 export function LoginScreen() {
   const navigate = useNavigate()
-  const { login } = useApp()
+  const { login, showToast } = useApp()
 
   const [tab, setTab] = useState<TabValue>('login')
   const [role, setRole] = useState<Role>('student')
@@ -223,6 +223,9 @@ export function LoginScreen() {
             <div className="flex justify-end">
               <button
                 type="button"
+                onClick={() =>
+                  showToast('Password reset is not available in this prototype.')
+                }
                 className="min-h-11 text-sm font-medium text-primary underline underline-offset-2"
               >
                 Forgot password?

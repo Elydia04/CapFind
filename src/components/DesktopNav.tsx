@@ -35,7 +35,7 @@ export function DesktopNav({ unreadMessages = false }: BottomNavProps) {
                   'relative inline-flex min-h-11 items-center gap-2 rounded-lg px-3 text-sm transition-colors',
                   isActive
                     ? 'font-bold text-white underline decoration-2 underline-offset-8'
-                    : 'font-medium text-white/85 hover:bg-white/10 hover:text-white',
+                    : 'font-medium text-white/90 hover:bg-white/10 hover:text-white',
                 ].join(' ')
               }
             >

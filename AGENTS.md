@@ -38,10 +38,12 @@ Extra tabs so nav is never a dead end: /applications and /profile (simple screen
   wireframe at the user's request.
 
 ### Design Tokens (define in src/index.css with @theme, use as Tailwind classes)
-primary #2F6FED | primary-soft #EAF1FF | ink #2A2A2A | muted #666666
-line #C9CDD3 | page #EEF0F3 | frame #1A1A1A
-success #2E7D32 / success-soft #E8F5E9 | warning #B26A00 / warning-soft #FFF8E1
-error #D32F2F / error-soft #FFF3F3
+primary #2560D9 | primary-soft #EAF1FF | ink #2A2A2A | muted #666666
+line #C9CDD3 | page #EEF0F3
+success #2E7D32 / success-soft #E8F5E9 | warning #8F5500 / warning-soft #FFF8E1
+error #C62828 / error-soft #FFF3F3
+(primary, warning and error were darkened from #2F6FED / #B26A00 / #D32F2F in
+Step 9 so every text/background pair reaches a contrast ratio of at least 4.5:1.)
 Font: system sans-serif (Arial/Helvetica fallback). No external fonts.
 Radius: buttons 8px, cards 12px, chips and pills fully rounded.
 Icons: lucide-react only. No emoji in the UI.

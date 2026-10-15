@@ -99,7 +99,7 @@ export function MessageThreadScreen() {
             type="submit"
             aria-label="Send message"
             disabled={isSendDisabled}
-            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:bg-line disabled:text-muted"
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:bg-page disabled:text-muted"
           >
             <Send className="h-5 w-5" aria-hidden="true" />
           </button>

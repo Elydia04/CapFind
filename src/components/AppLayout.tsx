@@ -13,7 +13,9 @@ export function AppLayout() {
   return (
     <div className="relative flex h-svh flex-col overflow-hidden bg-page">
       {showDesktopNav ? <DesktopNav unreadMessages={hasUnread} /> : null}
-      <Outlet />
+      {/* key remounts the screen on every route change, so each screen's scroll
+          container starts at the top. */}
+      <Outlet key={pathname} />
       {toast ? <Toast message={toast} onDismiss={clearToast} /> : null}
     </div>
   )
