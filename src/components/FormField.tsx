@@ -1,14 +1,15 @@
 import { TriangleAlert } from 'lucide-react'
 import { useId } from 'react'
-import type { InputHTMLAttributes, ReactNode } from 'react'
+import type { InputHTMLAttributes, ReactNode, Ref } from 'react'
 
 export type FormFieldProps = {
   label: string
   icon?: ReactNode
   error?: string
+  inputRef?: Ref<HTMLInputElement>
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'className'>
 
-export function FormField({ label, icon, error, id, ...rest }: FormFieldProps) {
+export function FormField({ label, icon, error, id, inputRef, ...rest }: FormFieldProps) {
   const generatedId = useId()
   const inputId = id ?? generatedId
   const errorId = `${inputId}-error`
@@ -29,6 +30,7 @@ export function FormField({ label, icon, error, id, ...rest }: FormFieldProps) {
         ) : null}
         <input
           id={inputId}
+          ref={inputRef}
           aria-invalid={error ? true : undefined}
           aria-describedby={error ? errorId : undefined}
           className={[
