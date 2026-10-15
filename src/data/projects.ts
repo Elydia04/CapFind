@@ -1,0 +1,88 @@
+import type { Project } from '../types'
+
+export const projects: Project[] = [
+  {
+    id: 'green-cart-inventory',
+    clientName: 'Green Cart Co.',
+    clientInitials: 'GC',
+    title: 'Inventory Tracking System',
+    summary: 'A simple web dashboard to track stock levels across two store locations.',
+    description:
+      'We run two small grocery stores and still track stock on paper. We need a web dashboard that lets staff record deliveries, flag low-stock items, and see a daily summary of what needs reordering. The system should be quick to learn for staff who are not technical.',
+    tags: ['Inventory', 'Dashboard', 'Web App'],
+    category: 'Retail',
+    status: 'open',
+    timeline: '10–12 weeks',
+    deadline: 'December 12, 2026',
+  },
+  {
+    id: 'bright-futures-scheduling',
+    clientName: 'Bright Futures Org',
+    clientInitials: 'BF',
+    title: 'Volunteer Scheduling App',
+    summary: 'A mobile app to match volunteers with open shifts at community events.',
+    description:
+      'Our volunteers coordinate weekend programs by email, which is slow and error-prone. We want a mobile app where volunteers can browse open shifts, sign up, and receive a reminder, while coordinators see who is covering each event. Accessibility matters a lot to us: large tap targets and clear labels.',
+    tags: ['Scheduling', 'Mobile App', 'Non-profit'],
+    category: 'Non-profit',
+    status: 'closing',
+    timeline: '8–10 weeks',
+    deadline: 'November 30, 2026',
+  },
+  {
+    id: 'brightline-enrollment',
+    clientName: 'Brightline Academy',
+    clientInitials: 'BA',
+    title: 'Course Enrollment Portal',
+    summary: 'A portal for students to browse and enroll in short courses.',
+    description:
+      'We offer evening courses and currently take enrollments over the phone. A portal where students can browse the catalog, check remaining seats, and enroll online would save our office hours and reduce mistakes. Printable confirmation is important for our records.',
+    tags: ['Education', 'Portal', 'Enrollment'],
+    category: 'Education',
+    status: 'open',
+    timeline: '12 weeks',
+    deadline: 'January 9, 2027',
+  },
+  {
+    id: 'trailhead-storefront',
+    clientName: 'Trailhead Outfitters',
+    clientInitials: 'TO',
+    title: 'Mobile Storefront App',
+    summary: 'A lightweight mobile storefront for browsing gear and checking availability.',
+    description:
+      'Customers keep asking whether items are in stock before driving to the shop. We would like a mobile app to browse our catalogue, view photos and prices, and see which location has an item. Checkout can come later — for now we want browsing and availability.',
+    tags: ['Mobile App', 'Retail', 'Catalogue'],
+    category: 'Mobile App',
+    status: 'open',
+    timeline: '10 weeks',
+    deadline: 'December 20, 2026',
+  },
+  {
+    id: 'northside-intake',
+    clientName: 'Northside Community Clinic',
+    clientInitials: 'NC',
+    title: 'Patient Intake Web App',
+    summary: 'A web form that lets patients complete intake paperwork before a visit.',
+    description:
+      'Our front desk spends the first ten minutes of every appointment retyping paper intake forms. A secure web form patients can fill out ahead of time would shorten queues and reduce transcription errors. Clear progress steps and a printable summary would help our staff.',
+    tags: ['Web App', 'Forms', 'Healthcare'],
+    category: 'Web App',
+    status: 'open',
+    timeline: '11 weeks',
+    deadline: 'January 16, 2027',
+  },
+  {
+    id: 'mealshare-donations',
+    clientName: 'MealShare Collective',
+    clientInitials: 'MS',
+    title: 'Donation Tracking Dashboard',
+    summary: 'A dashboard to record in-kind donations and show impact to sponsors.',
+    description:
+      'We collect food and supply donations from local businesses and report back quarterly. A dashboard to log donations, categorise them, and generate a simple impact summary would replace our spreadsheets and make sponsor reports far easier to prepare.',
+    tags: ['Non-profit', 'Dashboard', 'Reporting'],
+    category: 'Non-profit',
+    status: 'closing',
+    timeline: '9 weeks',
+    deadline: 'November 25, 2026',
+  },
+]
