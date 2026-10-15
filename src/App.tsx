@@ -6,6 +6,7 @@ import { ComponentsPreviewScreen } from './screens/ComponentsPreviewScreen'
 import { LoginScreen } from './screens/LoginScreen'
 import { MessagesScreen } from './screens/MessagesScreen'
 import { MessageThreadScreen } from './screens/MessageThreadScreen'
+import { NotFoundScreen } from './screens/NotFoundScreen'
 import { ProfileScreen } from './screens/ProfileScreen'
 import { ProjectDetailScreen } from './screens/ProjectDetailScreen'
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/applications" element={<ApplicationsScreen />} />
           <Route path="/profile" element={<ProfileScreen />} />
           <Route path="/components-preview" element={<ComponentsPreviewScreen />} />
+          <Route path="*" element={<NotFoundScreen />} />
         </Route>
       </Routes>
     </BrowserRouter>
