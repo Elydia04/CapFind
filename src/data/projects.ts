@@ -1,4 +1,12 @@
-import type { Project } from '../types'
+import type { Project, ProjectCategory } from '../types'
+
+export const projectCategories: readonly ProjectCategory[] = [
+  'Web App',
+  'Mobile App',
+  'Non-profit',
+  'Retail',
+  'Education',
+]
 
 export const projects: Project[] = [
   {
