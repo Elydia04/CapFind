@@ -21,7 +21,10 @@ const TABS: readonly Tab[] = [
 
 export function BottomNav({ unreadMessages = false }: BottomNavProps) {
   return (
-    <nav aria-label="Primary" className="flex shrink-0 border-t border-line bg-white">
+    <nav
+      aria-label="Primary"
+      className="flex shrink-0 border-t border-line bg-white md:hidden"
+    >
       {TABS.map(({ to, label, Icon }) => {
         const showsUnread = label === 'Messages' && unreadMessages
         return (

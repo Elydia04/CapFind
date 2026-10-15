@@ -24,12 +24,18 @@ Stack: React + Vite + TypeScript (TSX) + Tailwind CSS v4 + react-router-dom + lu
 Extra tabs so nav is never a dead end: /applications and /profile (simple screens).
 
 ### Layout
-- Mobile-first, single column. There is NO phone frame and NO status bar. The app
-  renders in a centered column (`max-w-app`, 30rem) that fills the phone's width and
-  sits centered on wider screens. This intentionally deviates from the original
-  phone-frame wireframe at the user's request.
-- Every screen has: blue AppBar -> scrollable content -> BottomNav
-  (except /login and /project/:id, which has a sticky action bar).
+- Responsive web app. No phone frame and no status bar. The app fills the viewport;
+  content adapts to phone, tablet, and desktop.
+- Navigation: phones (<768px) use the bottom tab bar (`BottomNav`, `md:hidden`);
+  tablet/desktop (>=768px) use a top nav bar (`DesktopNav`, `hidden md:flex`) with the
+  same 4 tabs. Only one nav is visible at a time. `AppLayout` shows `DesktopNav` on
+  every screen except `/login` and `/project/:id`.
+- Every screen has: blue AppBar -> scrollable content -> `BottomNav` on phones
+  (except /login and /project/:id, which has a sticky action bar and no tab bar).
+- Content responsiveness: Browse uses a responsive grid (1 / 2 / 3 columns); form and
+  detail screens use a centered readable column (e.g. `max-w-md` for forms,
+  `max-w-2xl` for content). This intentionally deviates from the original phone-frame
+  wireframe at the user's request.
 
 ### Design Tokens (define in src/index.css with @theme, use as Tailwind classes)
 primary #2F6FED | primary-soft #EAF1FF | ink #2A2A2A | muted #666666

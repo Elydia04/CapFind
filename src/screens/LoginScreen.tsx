@@ -112,7 +112,7 @@ export function LoginScreen() {
     <div className="flex flex-1 flex-col overflow-hidden">
       <AppBar title="Capstone Client Finder" />
 
-      <main className="flex-1 overflow-y-auto bg-page px-5 py-6">
+      <main className="mx-auto w-full max-w-md flex-1 overflow-y-auto bg-page px-5 py-6">
         <div className="flex flex-col items-center gap-2 pb-6 text-center">
           <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary text-white shadow-md">
             <GraduationCap className="h-8 w-8" aria-hidden="true" />

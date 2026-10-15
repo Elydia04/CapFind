@@ -17,8 +17,6 @@
   --color-error-soft: #fff3f3;
 
   --font-sans: system-ui, -apple-system, "Segoe UI", Arial, Helvetica, sans-serif;
-
-  --container-app: 30rem;
 }
 
 @layer base {
