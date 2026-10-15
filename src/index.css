@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  /* Full palette is added in Step 2; these two are needed for the shell. */
+  --color-page: #eef0f3;
+  --color-frame: #1a1a1a;
+}
