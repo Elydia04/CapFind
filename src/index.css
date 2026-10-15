@@ -1,7 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  /* Full palette is added in Step 2; these two are needed for the shell. */
+  --color-primary: #2f6fed;
+  --color-primary-soft: #eaf1ff;
+  --color-ink: #2a2a2a;
+  --color-muted: #666666;
+  --color-line: #c9cdd3;
   --color-page: #eef0f3;
   --color-frame: #1a1a1a;
+
+  --color-success: #2e7d32;
+  --color-success-soft: #e8f5e9;
+  --color-warning: #b26a00;
+  --color-warning-soft: #fff8e1;
+  --color-error: #d32f2f;
+  --color-error-soft: #fff3f3;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--color-page);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
 }

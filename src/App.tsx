@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { AppLayout } from './components/AppLayout'
 import { ApplicationsScreen } from './screens/ApplicationsScreen'
 import { BrowseScreen } from './screens/BrowseScreen'
+import { ComponentsPreviewScreen } from './screens/ComponentsPreviewScreen'
 import { LoginScreen } from './screens/LoginScreen'
 import { MessagesScreen } from './screens/MessagesScreen'
 import { MessageThreadScreen } from './screens/MessageThreadScreen'
@@ -21,6 +22,7 @@ function App() {
           <Route path="/messages/:id" element={<MessageThreadScreen />} />
           <Route path="/applications" element={<ApplicationsScreen />} />
           <Route path="/profile" element={<ProfileScreen />} />
+          <Route path="/components-preview" element={<ComponentsPreviewScreen />} />
         </Route>
       </Routes>
     </BrowserRouter>
