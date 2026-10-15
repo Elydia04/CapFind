@@ -1,0 +1,12 @@
+# Store and check out every text file with LF, so the repo is byte-identical on
+# every OS and git stops warning about CRLF conversion on Windows.
+* text=auto eol=lf
+
+# Keep binary assets untouched.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
