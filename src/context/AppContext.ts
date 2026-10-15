@@ -11,6 +11,7 @@ export type AppContextValue = {
   applyToProject: (id: string) => void
   sendMessage: (conversationId: string, text: string) => void
   markConversationRead: (id: string) => void
+  startConversation: (clientName: string, initials: string) => string
   showToast: (message: string) => void
   clearToast: () => void
 }

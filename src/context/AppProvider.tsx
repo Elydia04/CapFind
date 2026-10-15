@@ -5,6 +5,13 @@ import type { Conversation } from '../types'
 import { AppContext } from './AppContext'
 import type { AppContextValue } from './AppContext'
 
+function conversationIdFor(clientName: string): string {
+  return clientName
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
 export type AppProviderProps = {
   children: ReactNode
 }
@@ -62,6 +69,19 @@ export function AppProvider({ children }: AppProviderProps) {
     )
   }, [])
 
+  const startConversation = useCallback((clientName: string, initials: string) => {
+    const id = conversationIdFor(clientName)
+    setConversations((previous) =>
+      previous.some((conversation) => conversation.id === id)
+        ? previous
+        : [
+            ...previous,
+            { id, clientName, initials, messages: [], unread: false },
+          ],
+    )
+    return id
+  }, [])
+
   const showToast = useCallback((message: string) => {
     setToast(message)
   }, [])
@@ -81,6 +101,7 @@ export function AppProvider({ children }: AppProviderProps) {
       applyToProject,
       sendMessage,
       markConversationRead,
+      startConversation,
       showToast,
       clearToast,
     }),
@@ -94,6 +115,7 @@ export function AppProvider({ children }: AppProviderProps) {
       applyToProject,
       sendMessage,
       markConversationRead,
+      startConversation,
       showToast,
       clearToast,
     ],
